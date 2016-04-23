@@ -17,6 +17,15 @@
 PRODUCT_AAPT_CONFIG := normal hdpi xhdpi
 PRODUCT_AAPT_PREF_CONFIG := xhdpi
 
+#Fix ZenUI MicroSD Save Problem
+ADDITIONAL_DEFAULT_PROPERTIES += \
+  ro.epad.mount_point.microsd=/storage/MicroSD \
+  ro.epad.mount_point.usbdisk1=/storage/USBdisk1 \
+  ro.epad.mount_point.usbdisk2=/storage/USBdisk2 \
+  ro.epad.mount_point.usbdisk3=/storage/USBdisk3 \
+  ro.epad.mount_point.usbdisk4=/storage/USBdisk4 \
+  ro.epad.mount_point.usbdisk5=/storage/USBdisk5
+
 PRODUCT_PROPERTY_OVERRIDES += \
     ro.sf.lcd_density=320
 
