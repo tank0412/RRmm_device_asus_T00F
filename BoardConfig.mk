@@ -14,16 +14,14 @@
 # limitations under the License.
 #
 
-DEVICE_PATH := device/asus/T00F
-
 # inherit from common ctp-common
--include $(VENDOR_PATH)/BoardConfigCommon.mk
+-include device/asus/ctp-common/BoardConfigCommon.mk
 
 # Specific headers
-TARGET_BOARD_KERNEL_HEADERS := $(DEVICE_PATH)/kernel-headers
-TARGET_SPECIFIC_HEADER_PATH += $(DEVICE_PATH)/include
+TARGET_BOARD_KERNEL_HEADERS := device/asus/T00F/kernel-headers
+TARGET_SPECIFIC_HEADER_PATH += device/asus/T00F/include
 
-TARGET_RELEASETOOLS_EXTENSIONS := $(DEVICE_PATH)
+TARGET_RELEASETOOLS_EXTENSIONS := device/asus/T00F
 
 # Use the non-open-source parts, if they're present
 -include vendor/asus/T00F/BoardConfigVendor.mk
