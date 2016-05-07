@@ -15,7 +15,7 @@
 #
 
 # inherit from common ctp-common
--include device/asus/ctp-common/BoardConfigCommon.mk
+-include device/asus/cvtlp-common/BoardConfigCommon.mk
 
 # Specific headers
 TARGET_BOARD_KERNEL_HEADERS := device/asus/T00F/kernel-headers
@@ -23,12 +23,12 @@ TARGET_SPECIFIC_HEADER_PATH += device/asus/T00F/include
 
 TARGET_RELEASETOOLS_EXTENSIONS := device/asus/T00F
 
-# Use the non-open-source parts, if they're present
--include vendor/asus/T00F/BoardConfigVendor.mk
-
 # Partitions
 BOARD_CACHEIMAGE_FILE_SYSTEM_TYPE := ext4
 BOARD_USERDATAIMAGE_PARTITION_SIZE := 5277466624 ##5277483008 - 16384 // 5033MB
 BOARD_CACHEIMAGE_PARTITION_SIZE := 519045120 # // 495MB
 BOARD_SYSTEMIMAGE_PARTITION_SIZE := 1320157184 # // 1259MB
 BOARD_FLASH_BLOCK_SIZE := 131072
+
+# Use the non-open-source parts, if they're present
+-include vendor/asus/T00F/BoardConfigVendor.mk

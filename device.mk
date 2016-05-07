@@ -14,7 +14,7 @@
 # limitations under the License.
 #
 
-PRODUCT_AAPT_CONFIG := normal
+PRODUCT_AAPT_CONFIG := normal hdpi xhdpi
 PRODUCT_AAPT_PREF_CONFIG := xhdpi
 
 PRODUCT_PROPERTY_OVERRIDES += \
@@ -25,4 +25,4 @@ DEVICE_PACKAGE_OVERLAYS := device/asus/T00F/overlay
 $(call inherit-product-if-exists, frameworks/native/build/phone-xxhdpi-2048-hwui-memory.mk)
 $(call inherit-product-if-exists, frameworks/native/build/phone-xhdpi-2048-dalvik-heap.mk)
 $(call inherit-product-if-exists, vendor/asus/T00F/T00F-vendor.mk)
-$(call inherit-product, device/asus/ctp-common/ctp.mk)
+$(call inherit-product, device/asus/cvtlp-common/cvtlp.mk)
